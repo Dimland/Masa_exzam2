@@ -79,12 +79,14 @@ _Please, do NOT use online resources as an assistance for this part of the exam_
 ## Section B: Please, explain the following terms the best way you can _=> 22 points_
 
 11. **Constructor** _=> 4 points_
+    constructor this a special method used for create and initialize objects created using class
 
 12. **Connection string** _=> 4 points_
     Line with settings for connecting to the server
 13. **IDENTITY & SEED** _=> 5 points_
 
 14. **Abstract class** _=> 5 points_
+    Abstract cannot be created. An abstract class object reference cannot be created and contains one or more abstract methods. Used to unify code
 
 15. **Export keyword in nodejs code** _=> 4 points_
 
