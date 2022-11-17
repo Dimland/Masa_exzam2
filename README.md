@@ -9,7 +9,7 @@ _Please, do NOT use online resources as an assistance for this part of the exam_
 1. **What is Repro steps?** _=> 2 points_
 
 - [ ] Logical steps for planning the structure of DB repository
-- [Х] Steps that are required in order to reproduce a bug in the system
+- [x] Steps that are required in order to reproduce a bug in the system
 - [ ] Sequence of actions required to build a new nodejs server
 - [ ] A process of creation of a new Github repository
 
@@ -18,13 +18,13 @@ _Please, do NOT use online resources as an assistance for this part of the exam_
 - [ ] Get the request from the router, treat the request parameters, prepare the response of the server to the consumer
 - [ ] Keep state of a specific logic portion of the system, provide processing of the data passed from the different controllers, parse the data and returned the processed response
 - [ ] To be the first element in the system that should service the consumer for his CRUD request to the server
-- [Х] To provide services to the system that do not require a state but should be used across the whole system
+- [x] To provide services to the system that do not require a state but should be used across the whole system
 
 3. **What is a foreign key?** _=> 2 points_
 
 - [ ] A key by which the JWT token is signed
 - [ ] A pair security key for a private key. This key is stored in online repository for asymmetric encryption processing
-- [Х] A way to link between 2 tables in the relational DB
+- [x] A way to link between 2 tables in the relational DB
 - [ ] Such a term does not exist
 
 4. **What is the code of a request redirection in HTTP protocol?** _=> 2 points_
@@ -51,7 +51,7 @@ _Please, do NOT use online resources as an assistance for this part of the exam_
 7. **What is needed for enhancement of a security level of a JWT token?** _=> 2 points_
 
 - [ ] Password
-- [ ] Encryption
+- [x] Encryption
 - [ ] A private key
 - [ ] Secret
 
@@ -82,14 +82,17 @@ _Please, do NOT use online resources as an assistance for this part of the exam_
     constructor this a special method used for create and initialize objects created using class
 
 12. **Connection string** _=> 4 points_
-    Line with settings for connecting to the server
+A connection string is a string with information for connecting to a database.
 13. **IDENTITY & SEED** _=> 5 points_
+Identity is a property that allows you to make a column in the database an identity column. It must be a numeric type, and when we add data to this table, the id will be automatically incremented by 1.
+
+ SEED is needed to decide which ID to start incrementing from
 
 14. **Abstract class** _=> 5 points_
     Abstract cannot be created. An abstract class object reference cannot be created and contains one or more abstract methods. Used to unify code
 
 15. **Export keyword in nodejs code** _=> 4 points_
-
+Allows you to import the necessary parts of the code (function, class, constant, etc. into another module
 ## Part II: Practice on paper _=> 45 points_
 
 _No restrictions on online resources usage. You also may use your development machine for assistance in debugging if needed._
@@ -112,6 +115,14 @@ You need to write a query that returns for each user a full data. Consider that 
 | John Doe        | Mark Smith     | Manager  |
 | Mary Smith      | Klark Smith    | Cashier  |
 | Patrice Raymond | Not an eployee |          |
+
+
+	SELECT i1.first_name + ' ' + i1.last_name [Full name], 
+		(SELECT i2.first_name + ' ' + i2.last_name
+		FROM [user] i2
+		WHERE i1.create_user_id = i2.id) [Created By],
+
+
 
 18. **Write a method in JS/TS that gets as an argument 2 dates and returns a boolean value of whether those dates share the same month**. _=> 5 points_
     Solution:
